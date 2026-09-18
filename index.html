@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,17 @@
       <h1>Мої захоплення</h1>
 
       <nav>
-        <a href="index.html">Головна</a>
-        <a href="contacts.html">Контакти</a>
+        <ul>
+          <li><a href="#about">Про мене</a></li>
+          <li><a href="#hobbies">Захоплення</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section id="about">
         <h2>Про мене</h2>
         <p>
           Мене звати Федір. Я люблю комп'ютерні ігри, спорт і все, що пов'язане
@@ -27,7 +31,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="hobbies">
         <h2>Мої захоплення</h2>
         <ul>
           <li>Комп'ютерні ігри</li>
@@ -37,27 +41,73 @@
         </ul>
       </section>
 
-      <p><a href="#gallery">Перейти до галереї</a></p>
+      <section id="gallery">
+        <h2>Галерея</h2>
 
-      <section>
-        <h2 id="gallery">Галерея</h2>
+        <ul>
+          <li>
+            <img
+              src="images/gaming.jpg"
+              alt="Комп'ютерні ігри"
+              width="300"
+              height="200"
+            />
+            <p>Комп'ютерні ігри — одне з моїх улюблених захоплень.</p>
+          </li>
 
-        <img src="./images/gaming.jpg" alt="Комп'ютерні ігри" width="300" />
-        <p>Комп'ютерні ігри — одне з моїх улюблених захоплень.</p>
+          <li>
+            <img
+              src="images/volleyball.jpg"
+              alt="Волейбольний м'яч"
+              width="300"
+              height="200"
+            />
+            <p>Волейбол — один із видів спорту, яким я займаюся.</p>
+          </li>
 
-        <img
-          src="./images/volleyball.jpg"
-          alt="Волейбол"
-          width="300"
-        />
-        <p>Волейбол — один із видів спорту, яким я займаюся.</p>
+          <li>
+            <img
+              src="images/computer.jpg"
+              alt="Робоче місце"
+              width="300"
+              height="200"
+            />
+            <p>Веброзробка — цікава для мене сфера.</p>
+          </li>
+        </ul>
+      </section>
 
-        <img
-          src="./images/computer.jpg"
-          alt="Робоче місце"
-          width="300"
-        />
-        <p>Веброзробка — цікава для мене сфера.</p>
+      <section id="contact">
+        <h2>Форма звернення</h2>
+
+        <form>
+          <p>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required />
+          </p>
+
+          <p>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required />
+          </p>
+
+          <p>
+            <label for="subject">Тема звернення:</label>
+            <select id="subject" name="subject" required>
+              <option value="">Оберіть тему</option>
+              <option value="question">Запитання</option>
+              <option value="suggestion">Пропозиція</option>
+              <option value="feedback">Відгук</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </p>
+
+          <button type="submit">Надіслати</button>
+        </form>
       </section>
     </main>
 
